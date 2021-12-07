@@ -1,0 +1,28 @@
+@mixin responsive($minVal, $maxVal) {
+  @media only screen and (min-width: $minVal) and (max-width: $maxVal) {
+    @content;
+  }
+}
+@mixin deviceStyles($deviceType) {
+  @if ($deviceType == mobile) {
+    @include responsive(10px, 767px) {
+      @content;
+    }
+  } @else if($deviceType == lgDesktop) {
+    @include responsive(10px, 991px) {
+      @content;
+    }
+  } @else if($deviceType == iProTab) {
+    @include responsive(10px, 1160px) {
+      @content;
+    }
+  }
+  // @else if($deviceType == lg-desktop){
+  //   @include responsive(1602px,4401){
+  //     @content;
+  //   }
+  // }
+  @else {
+    @error 'device breakpoint invalid';
+  }
+}

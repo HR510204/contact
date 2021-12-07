@@ -1,0 +1,23 @@
+@mixin inputFiled {
+  outline: none;
+  border: 0;
+  border-bottom: 2px solid #e3e3e3;
+  padding: 0.4rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+@mixin grid3X {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@mixin grid4X {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+@mixin secondary {
+  opacity: 0.5;
+  font-size: $secondaryFont;
+  font-family: $secondaryFontFamily;
+}

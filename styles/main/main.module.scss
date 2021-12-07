@@ -1,4 +1,27 @@
+@import "../partials/defaults";
 .container {
+  animation: animation 0.7s;
   background-color: #e3e3e3;
-  border-radius: 5px;
+  border-radius: 11px;
+  padding: 1.5rem;
+  display: flex;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  @include deviceStyles(iProTab) {
+    display: block;
+    position: static;
+  }
+  .image {
+    object-fit: cover;
+    border-radius: 11px 0 0 11px;
+  }
+
+  .right {
+    width: 500px;
+    height: 700px;
+  }
 }

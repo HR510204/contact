@@ -2,16 +2,23 @@ import Contact from '../components/contactUs/index'
 import Styles from '../styles/main/main.module.scss'
 import Image from 'next/image'
 import logo from "../public/assets/desk.jpg"
+import useWindowDimensions from "../components/useWindowDimensions";
+
 export default function Home() {
+
+  const { height, width } = useWindowDimensions();
+  console.log(width)
+  const result = width <= 1160 ? "responsive" : null
+
   return (
     <div className={Styles.container}>
-
       <Image
         className={Styles.image}
         src={logo}
         alt="Picture of the author"
         height={600}
         width={700}
+        layout={result}
       />
 
       <div className={Styles.right}>

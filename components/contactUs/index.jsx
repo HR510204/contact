@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Styles from "../../styles/contactUs/contact.module.scss";
 // import db from "../dataBase/firebase";
+
 const index = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

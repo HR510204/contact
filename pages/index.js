@@ -7,7 +7,6 @@ import useWindowDimensions from "../components/useWindowDimensions";
 export default function Home() {
 
   const { height, width } = useWindowDimensions();
-  console.log(width)
   const result = width <= 1160 ? "responsive" : null
 
   return (
@@ -20,7 +19,6 @@ export default function Home() {
         width={700}
         layout={result}
       />
-
       <div className={Styles.right}>
         <Contact />
       </div>

@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import Styles from "../../styles/contactUs/contact.module.scss";
-// import db from "../dataBase/firebase";
-
+import firestore from "../config/firebase.config";
 const index = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const handleSubmit = (e) => {
-    console.log(name, email, message);
     e.preventDefault();
-
-    db.collection("contacts")
+    firestore
+      .collection("contacts")
       .add({
         name: name,
         email: email,

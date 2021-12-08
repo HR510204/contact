@@ -15,9 +15,7 @@ export default function Home() {
         className={Styles.image}
         src={logo}
         alt="Picture of the author"
-        height={600}
-        width={700}
-        layout={result}
+        width={650} layout={result}
       />
       <div className={Styles.right}>
         <Contact />
